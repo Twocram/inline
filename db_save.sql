@@ -11,7 +11,7 @@ CREATE TABLE `inline`.`comment` (
                                     `post_id` INT NOT NULL,
                                     `name` VARCHAR(255) NOT NULL,
                                     `email` VARCHAR(255) NOT NULL,
-                                    `body` VARCHAR(255) NOT NULL,
+                                    `body` VARCHAR(500) NOT NULL,
                                     PRIMARY KEY (`id`),
                                     INDEX(`post_id`),
                                     UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
