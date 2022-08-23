@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<?php require "db_connect.php"; ?>
 
 </body>
 
