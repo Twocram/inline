@@ -14,18 +14,12 @@ $comments_added = true;
 
 foreach ($posts_arr as $value) {
     $sql = "INSERT INTO post (id, title, body) VALUES ('$value->id', '$value->title', '$value->body')";
-    if (!mysqli_query($connection, $sql)) {
-        echo "Не удалось добавить посты: " . mysqli_error($connection) . "</br>";
-        $posts_added = false;
-    }
+    if (!mysqli_query($connection, $sql)) $posts_added = false;
 }
 
 foreach ($comments_arr as $value) {
     $sql = "INSERT INTO comment (id, post_id, name, email, body) VALUES ('$value->id', '$value->postId', '$value->name', '$value->email', '$value->body')";
-    if (!mysqli_query($connection, $sql)) {
-        echo "Не удалось добавить комментарии: " . mysqli_error($connection) . "</br>";
-        $comments_added = false;
-    }
+    if (!mysqli_query($connection, $sql)) $comments_added = false;
 }
 
 if ($posts_added && $comments_added) {
