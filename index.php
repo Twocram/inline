@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inline test</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <form method="post">
-        <button name="add_data">Добавить данные</button>
-        <?php require "load_data.php"; ?>
-    </form>
-    <hr>
+    <div class="container">
+        <form method="post" class="add-form">
+            <input type="submit" name="add_data" class="add-form__btn" value="Добавить данные">
+            <?php require "load_data.php"; ?>
+        </form>
 
-    <form method="get">
-        <input type="text" name="search" id="search">
-        <input type="submit" name="find" value="Найти">
-    </form>
+        <form method="get" class="search-form">
+            <input type="text" name="search" id="search" class="search-form__input">
+            <input type="submit" name="find" value="Найти" class="search-form__btn">
+        </form>
 
-    <?php require "find_posts.php"; ?>
+        <?php require "find_posts.php"; ?>
+    </div>
+
 
 </body>
 
