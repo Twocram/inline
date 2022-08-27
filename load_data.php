@@ -1,9 +1,9 @@
 <?php
 require "db_connect.php";
 
-$btn = $_POST['add_data'];
+$add_btn = $_POST['add_data'];
 
-if (isset($btn)) {
+if (isset($add_btn)) {
     $posts_url = "https://jsonplaceholder.typicode.com/posts";
     $comments_url = "https://jsonplaceholder.typicode.com/comments";
 
